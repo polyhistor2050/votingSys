@@ -1,20 +1,18 @@
+window.onload = build;
 const candidates = ['Michael', 'raegarn', 'Thomas', 'Peter', 'John', 'chriss'];
 const message = document.getElementById("message");
-const addCandidate = document.getElementById("addCandidate");
-const addNew = document.getElementById("addNew");
+const addCandidate = document.getElementById("Candidate");
+const addNew = document.getElementById("addNew");   
 const output = document.getElementById("output");
 
-addNew.addEventListener("click", added);
-function added() {
+addNew.onclick = function (){
     const newCandidate = addCandidate.value;
     adder(newCandidate, candidates.length, 0);
     candidates.push(newCandidate);
 }
-console.log(candidates.length); //number of candidate in the array
-
 function build() {
     candidates.forEach((item, index) => {
-        adder(item, index, 0);
+    adder(item, index, 0);
     });
 }
 
